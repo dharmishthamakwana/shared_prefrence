@@ -28,10 +28,6 @@ class _SignInState extends State<SignIn> {
             // crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FlutterLogo(size: 80),
-              SizedBox(
-                height: 20,
-              ),
               TextField(
                 controller: txtemail,
                 decoration: InputDecoration(
