@@ -4,6 +4,7 @@ import 'package:shared_prefrence/screen/home/provider/home_provider.dart';
 import 'package:shared_prefrence/screen/home/view/home_Screen.dart';
 import 'package:shared_prefrence/screen/home/view/signin_screen.dart';
 import 'package:shared_prefrence/screen/home/view/signup_screen.dart';
+import 'package:shared_prefrence/screen/home/view/splesh_screen.dart';
 
 void main() {
   runApp(
@@ -16,7 +17,8 @@ void main() {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {
-          '/': (context) => SignIn(),
+          '/': (context) => SplashScreen(),
+          'signIn': (context) => SignIn(),
           'Sign': (context) => SignUp(),
           'welcome': (context) => Home(),
         },
