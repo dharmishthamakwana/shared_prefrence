@@ -20,7 +20,7 @@ class _SignUpState extends State<SignUp> {
         appBar: AppBar(
           centerTitle: true,
           title:
-              Text("SIGN UP ", style: TextStyle(fontWeight: FontWeight.bold)),
+              const Text("SIGN UP ", style: TextStyle(fontWeight: FontWeight.bold)),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -29,24 +29,24 @@ class _SignUpState extends State<SignUp> {
             children: [
               TextField(
                 controller: txtemail,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Email',
                   prefixIcon: Icon(Icons.email),
 
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               TextField(
                 controller: txtpassword,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Password',
                   prefixIcon: Icon(Icons.lock),
 
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
                   var email = txtemail.text;
@@ -55,9 +55,9 @@ class _SignUpState extends State<SignUp> {
                   shr.CreateShr(email, password);
                   Navigator.pop(context);
                 },
-                child: Text("Sign UP"),
+                child: const Text("Sign UP"),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               TextButton(
                 onPressed: () {
                   Navigator.pop(context);

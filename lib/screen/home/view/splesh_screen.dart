@@ -12,9 +12,14 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    // TODO: implement initState
+    super.initState();
     selectscreen();
-    return SafeArea(
+  }
+  @override
+  Widget build(BuildContext context) {
+    return const SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
         body: Center(
@@ -29,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Map m1 = await shr.readShr();
     if (m1["check"] == true) {
       Future.delayed(
-        Duration(seconds: 3),
+        const Duration(seconds: 3),
             () {
           Navigator.pushReplacementNamed(context, "welcome");
         },
@@ -38,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
     else
     {
       Future.delayed(
-        Duration(seconds: 3),
+        const Duration(seconds: 3),
             () {
           Navigator.pushReplacementNamed(context, "signIn");
         },

@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: Colors.blueGrey.shade900,
         appBar: AppBar(
-          title: Text("Welcome"),
+          title: const Text("Welcome"),
         ),
         body: GridView.custom(
           gridDelegate: SliverWovenGridDelegate.count(
@@ -30,8 +30,8 @@ class _HomeState extends State<Home> {
             mainAxisSpacing: 8,
             crossAxisSpacing: 8,
             pattern: [
-              WovenGridTile(1),
-              WovenGridTile(
+              const WovenGridTile(1),
+              const WovenGridTile(
                 6 / 9,
                 crossAxisRatio: 0.9,
                 alignment: AlignmentDirectional.centerEnd,
@@ -40,19 +40,19 @@ class _HomeState extends State<Home> {
           ),
           childrenDelegate: SliverChildBuilderDelegate(
             childCount: 9,
-            (context, index) => Tile(index: index),
+            (context, index) => tile(index: index),
           ),
         ),
       ),
     );
   }
 
-  Tile({required int index}) {
+   Widget tile({required int index}) {
     return Container(
       color: Colors.black38,
       child: Stack(
         children: [
-          Container(
+          SizedBox(
             height: double.infinity,
             child: Image.asset(
               "${home_providerfalse!.Images[index]}",
@@ -71,7 +71,7 @@ class _HomeState extends State<Home> {
               alignment: Alignment.center,
               child: Text(
                 "${home_providerfalse!.name[index]}",
-                style: TextStyle(fontSize: 18, color: Colors.black),
+                style: const TextStyle(fontSize: 18, color: Colors.black),
               ),
             ),
           ),

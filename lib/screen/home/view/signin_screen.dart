@@ -20,7 +20,7 @@ class _SignInState extends State<SignIn> {
         appBar: AppBar(
           centerTitle: true,
           title:
-              Text("SIGN IN ", style: TextStyle(fontWeight: FontWeight.bold)),
+              const Text("SIGN IN ", style: TextStyle(fontWeight: FontWeight.bold)),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -30,22 +30,22 @@ class _SignInState extends State<SignIn> {
             children: [
               TextField(
                 controller: txtemail,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Email',
                   prefixIcon: Icon(Icons.email),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               TextField(
                 controller: txtpassword,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Password',
                   prefixIcon: Icon(Icons.lock),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () async {
                   String userEmail = txtemail.text;
@@ -56,15 +56,15 @@ class _SignInState extends State<SignIn> {
                     Navigator.pushNamed(context, 'welcome');
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
+                      const SnackBar(
                         content: Text("Invalid Data"),
                       ),
                     );
                   }
                 },
-                child: Text("Sign In"),
+                child: const Text("Sign In"),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, 'Sign');
